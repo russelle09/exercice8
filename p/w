@@ -53,4 +53,4 @@ int nkmain(const NkEntryState &state) {
 #if defined(NKENTSEU_PLATFORM_HARMONYOS)
 NKENTSEU_HARMONY_DEFINE_MODULE(entry)
 #endif
-
+return 0;
