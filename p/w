@@ -42,13 +42,15 @@ int nkmain(const NkEntryState &state) {
 	ev.AddEventCallback<NkTouchBeginEvent>(
 		[&](NkTouchBeginEvent *e) { logger.Infof("nkmain: touch begin contacts=%u", e->GetNumTouches()); });
 
-	while (window.IsOpen(int argc, argv)) {
+	while (window.close()) {
 		ev.PollEvents();
 	}
 
 	logger.Infof("nkmain: end");
-	logger.Flush();
 	return 0;
 }
 
+#if defined(NKENTSEU_PLATFORM_HARMONYOS)
+NKENTSEU_HARMONY_DEFINE_MODULE(entry)
 #endif
+return 0;
