@@ -54,3 +54,4 @@ int nkmain(const NkEntryState &state) {
 NKENTSEU_HARMONY_DEFINE_MODULE(entry)
 #endif
 return 0;
+
